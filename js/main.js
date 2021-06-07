@@ -1,9 +1,11 @@
 
+
 function getcontent(){
     var ajax = new XMLHttpRequest();
     ajax.open("GET","https://reqres.in/api/users?page=2");
     ajax.send();
     var rseult="";
+   
     ajax.onreadystatechange = function(){
         if(ajax.readyState == 4 && ajax.status == 200){
             var data1 = JSON.parse(ajax.response);
@@ -20,7 +22,11 @@ function getcontent(){
              }
           
         }
-        var conainer=document.getElementById("rsu").innerHTML=rseult;
+        document.getElementById("rsu").innerHTML=rseult;
     }
     
 }
+let clear=document.querySelector(".btn2");
+clear.addEventListener("click",function(){
+    document.getElementById("rsu").innerHTML='';
+})
