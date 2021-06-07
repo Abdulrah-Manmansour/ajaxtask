@@ -16,7 +16,7 @@ function getcontent(){
                  rseult+=`<div class="item">
                  <img src="${data2[i].avatar}"</img>
                  <h4 class="firstname">  ${"firstname:" +  " " +  data2[i].first_name}</h4>
-                 <h4 class="lastname">  ${"lastname:" +  " " +  data2[i].first_name}</h4>
+                 <h4 class="lastname">  ${"lastname:" +  " " +  data2[i].last_name}</h4>
                  <p class="email">${data2[i].email}</p>
                  </div>`
              }
